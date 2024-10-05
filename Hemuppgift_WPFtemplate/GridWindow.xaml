@@ -6,7 +6,46 @@
         xmlns:local="clr-namespace:Hemuppgift_WPFtemplate"
         mc:Ignorable="d"
         Title="GridWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid x:Name="MainGrid" Background="WhiteSmoke" Grid.Row="0" Margin="0,50,0,0">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Grid.ColumnSpan="4" Margin="8,-34,12,0">
+            <TextBlock x:Name="rowLabel"
+                Text="Row"
+                Margin="0,0,5,0"
+                FontWeight="SemiBold"/>
+            <TextBox x:Name="rowInput"
+                 Width="60"
+                 Margin="0,0,10,0"/>
+            <TextBlock x:Name="columnLabel"
+                Text="Column" 
+                Margin="0,0,5,0"
+                FontWeight="SemiBold"/>
+            <TextBox x:Name="columnInput"
+                     Width="60"
+                     Margin="0,0,10,0"/>
+
+            <Button x:Name="applyButton"
+             Content="Apply" HorizontalAlignment="Center" Height="20" Width="70" Grid.Column="3" Cursor="Hand" BorderBrush="Transparent" Click="applyButton_Click"/>
+            <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Center" Height="20" Width="70" Cursor="Hand" BorderBrush="Transparent" Click="removeButton_Click" />
+        </StackPanel>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition  Height="*"/>
+            <RowDefinition  Height="*"/>
+            <RowDefinition  Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition  Width="*" />
+            <ColumnDefinition  Width="*"  />
+            <ColumnDefinition  Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+
+
     </Grid>
 </Window>
+
+    

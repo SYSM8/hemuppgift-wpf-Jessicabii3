@@ -8,18 +8,26 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        
+        <!--Frame för att visa andra fönster-->
+        <Frame x:Name="MainFrame"/>
+        
 
-        <Button x:Name="btnGrid" Content="Grid"/>
-        <Button x:Name="btnStackPanel" Content="StackPanel" Grid.Column="1"/>
-        <Button x:Name="btnWrapPanel" Content="WrapPanel" Grid.Row="1"/>
-        <Button x:Name="btnDockPanel" Content="DockPanel" Grid.Column="1" Grid.Row="1"/>
+        <!--Knappar i övre raden-->
+        <Button x:Name="gridButton" Content="Grid" Margin="10" Padding="5" FontSize="25" ToolTip="Öppna Grid Fönster" Click="gridButton_Click"/>
+        <Button x:Name="stackPanelButton" Content="StackPanel" Grid.Column="1" Margin="10" Padding="5" FontSize="25" ToolTip="Öppna StackPanel Fönster" Click="StackPanelButton_Click"/>
+        <!--Knappar i nedre raden-->
+        <Button x:Name="wrapPanelButton"  Content="WrapPanel" Margin="10" Padding="5" FontSize="25" Grid.Row="1" ToolTip="Öppna WrapPanel Fönster" Click="wrapPanelButton_Click"/>
+        <Button x:Name="dockPanelButton"  Content="DockPanel" Grid.Column="1" Grid.Row="1" Margin="10" Padding="5" FontSize="25" ToolTip="Öppna DockPanel Fönster" Click="dockPanelButton_Click"/>
+             
+              
 
 
     </Grid>
