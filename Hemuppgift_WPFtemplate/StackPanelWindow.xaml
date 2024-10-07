@@ -1,0 +1,30 @@
+﻿<Window x:Class="Hemuppgift_WPFtemplate.StackPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StackPanelWindow" Height="450" Width="800">
+    <Grid Background="White">
+        <ScrollViewer x:Name="scrollViewer" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" Margin="0,10,0,0">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="10">
+                <TextBlock Text="Välj orientering:" FontWeight="Bold" FontSize="16" Margin="0,0,0,10" />
+
+                <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                    <RadioButton x:Name="horizontalRadioButton" Content="Horizontal" Checked="horizontalRadioButton_Checked" GroupName="Orientation"/>
+                    <RadioButton x:Name="verticalRadioButton" Content="Vertical" IsChecked="True" Checked="verticalRadioButton_Checked" GroupName="Orientation"/>
+                </StackPanel>
+
+
+                <StackPanel x:Name="mystackPanel" Orientation="Horizontal" Margin="10">
+                    <Rectangle Fill="Red" Width="100" Height="100" Margin="5"/>
+                    <Rectangle Fill="Orange" Width="90" Height="90" Margin="5"/>
+                    <Rectangle Fill="Yellow" Width="80" Height="80" Margin="5"/>
+                    <Rectangle Fill="LightGreen" Width="70" Height="70" Margin="5"/>
+                    <Rectangle Fill="Green" Width="60" Height="60" Margin="5"/>
+                    <Rectangle Fill="LightBlue" Width="50" Height="50" Margin="5"/>
+                    <Rectangle Fill="Blue" Width="40" Height="40" Margin="5"/>
+                    <Rectangle Fill="Black" Width="30" Height="30" Margin="5"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
